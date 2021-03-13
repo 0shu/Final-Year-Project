@@ -24,3 +24,9 @@ My goals are thus:
 
 I'll see you on the other side.
 - Joshua (02:22am)
+
+Added basic class stuff for hit algorithm (untested, basically pseudocode)
+Might re-write as full pseudocode tomorrow. Structure > function til we have everything in.
+
+298 hours to go.
+- Joshua (3:13am)
