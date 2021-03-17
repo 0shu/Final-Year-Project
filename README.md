@@ -1,5 +1,5 @@
 # Virtual Blacksmithing
-![Prototype Screenshot](https://github.com/0shu/Final-Year-Project/Assets/Cropped-Screenshot.png)
+![Prototype Screenshot](/Assets/Cropped-Screenshot.png)
 **Joshua Simons - University Final Year Project**<br>
 *Borne of frustration at current game crafting systems and a desire to make something more interesting and more like actual crafting instead of a list based collectathon*
 <br><br>
@@ -33,40 +33,40 @@ This shape is a staple of human thought. All its edges and faces are axis-aligne
 
 ### Simple Tetrahedron
 This Shape is the simples possible 3D shape, being made of the smallest number of the simplest possible 2D shape (4 Traingular Faces).
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/In-progress.png)
+![Not Started](/Assets/In-progress.png)
 <br><br><br>
 
 ## Multi-Primitive Shapes
 Here's where I'll show the progress of chaining mutiple primitives together by connecting common vertices, edges, and faces.
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
 
 ### Triangular Bipyramid
 This shape is like 2 tetrahedra stuck together by sharing one face.
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
 
 ### Tetrahedron Strip
 Once we have 2 tetrahedra working in concert chaining them n number of times should be easy!
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
 
 ### Cuboid of tetrahedra
 A slightly more advanced shape. 4 Tetrahedra surrounding an inner tetrahedron.
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br><br>
 
 ## Shape-Splitting
 Now that we can make and use shapes of multiple primitives, we want to be able to break up simple larger shapes into a collection of smaller shapes.
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
 
 ### Halfing a tetrahedron
 Adding an extra point on the edge of 1 teatrhedron to turn it into 2!
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
 
 ### Cuboid into tetrahedrons
 Turning a cube into multiple tetrahedrons!
-![Not Started](https://github.com/0shu/Final-Year-Project/Assets/Not-started.png)
+![Not Started](/Assets/Not-started.png)
 <br><br>
