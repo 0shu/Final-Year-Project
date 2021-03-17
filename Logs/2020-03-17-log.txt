@@ -1,0 +1,10 @@
+Got the go-ahead from Jethro regarding putting the project on github, yaaay!
+
+Putting in tons of time just seems impossible, but I did a ton of work this weekend on shaders.
+Nearly finished with all the content on that module, hillarious contrast to this module.
+Yet I'll have more time to do this one once I've completed the other, so its still good!
+
+Today's plan is simple:
+Define all possible theoretical configurations of tetrahedrons.
+Define  warping operations on those tetrahedron.
+Get equations for these relationships.
