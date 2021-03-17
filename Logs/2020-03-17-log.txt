@@ -8,3 +8,10 @@ Today's plan is simple:
 Define all possible theoretical configurations of tetrahedrons.
 Define  warping operations on those tetrahedron.
 Get equations for these relationships.
+(14:32)
+
+Work so far:
+- Created readme for project (a nice one with a linked contents page and images)
+    - Descriptions of all the current parts
+    - Planned future parts
+    - Images & Gifs to spruce it up a bit and communicate more effectively
