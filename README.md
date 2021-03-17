@@ -28,12 +28,13 @@ We can use lots of the same pieces to create a larger, more complex whole.
 <br><br>
 
 ### Simple Cuboid
-This shape is a staple of human thought. All its edges and faces are axis-aligned which makes working on it easier to comprehend and scaling it in different directions easier mathematically.
+This shape is a staple of human thought. All its edges and faces are axis-aligned which makes working on it easier to comprehend and scaling it in different directions easier mathematically.<br>
+![Simple Cuboid](/Assets/simple-cuboid.gif)
 <br><br>
 
 ### Simple Tetrahedron
 This Shape is the simples possible 3D shape, being made of the smallest number of the simplest possible 2D shape (4 Traingular Faces).
-![Not Started](/Assets/In-progress.png)
+![In Progress](/Assets/In-progress.png)
 <br><br><br>
 
 ## Multi-Primitive Shapes
