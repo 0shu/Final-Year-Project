@@ -19,3 +19,21 @@ Work so far includes:
 - reinstalled unity and unity hub, this apperas to have fixed problems with my project
 - made new unity project to do the work in
 - zipped up old project and moved it out of directory (kept copy as backup in case of emergency)
+
+(18:35)
+- so far I've got tetrahedrons working with lines that can have their vertices transformed 1 dimensionally
+next I need to get the base triangle expanding but remaining similar
+
+There's 6 reversible transformations:
+point-point - 1D
+point-line - 2x 1D
+point-face - 2D
+line-face - 1Dangular or 2D
+line-line - 2x 1D
+face-face - 2Dangular 
+
+(19:37)
+- Got a simple 1D hit algo working with base area resizing.
+It was simpler  than i thought it might be in the end. Feel like im going crazy after doing all that tho.
+Lots of watching random youtube and reading articles, trig/geometry is hard man.
+Gonna implement a simple size calculator for tetras to make sure its always resizing correctly!
