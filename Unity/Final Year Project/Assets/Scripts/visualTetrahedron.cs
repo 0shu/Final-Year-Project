@@ -7,6 +7,7 @@ public class visualTetrahedron : MonoBehaviour
 {
     public List<Vector3> m_vertices = new List<Vector3>(4);
     public SelectedVert m_selected;
+    public float m_hitforce = 0.91f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,30 @@ public class visualTetrahedron : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ApplyHit1D()
+    {
+        //Decide which point based on the m_selected
+        switch(m_selected)
+        {
+            case SelectedVert.A:
+            {
+                break;
+            }
+            case SelectedVert.B:
+            {
+                break;
+            }
+            case SelectedVert.C:
+            {
+                break;
+            }
+            case SelectedVert.D:
+            {
+                break;
+            }
+        }
     }
 
     public void SetUpLines()

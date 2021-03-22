@@ -429,7 +429,8 @@ MonoBehaviour:
   - {x: 2, y: 0, z: 0}
   - {x: 0.5, y: 2, z: 0.5}
   - {x: 0, y: 0, z: 2}
-  m_selected: 3
+  m_selected: 2
+  m_hitforce: 0.91
 --- !u!120 &1679661521
 LineRenderer:
   m_ObjectHideFlags: 0
