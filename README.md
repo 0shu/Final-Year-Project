@@ -35,7 +35,8 @@ This is very rudimentary and does not give any ability to change the topology at
 <br><br>
 
 ### Simple Tetrahedron
-This Shape is the simples possible 3D shape, being made of the smallest number of the simplest possible 2D shape (4 Traingular Faces).
+A tetrahedron is the simplest possible 3D shape, being made of the smallest number of the simplest possible 2D shape (4 Traingular Faces). In this variation we imagine the tetrahedron as a combination of a face and an opposing vertex.
+When maintaining volume, the distance of the vertex to the face is inversely proportional to the size of the face. Increasing one by a factor of 2 means decreasing the other by a factor of 2.
 ![In Progress](/Assets/In-progress.png)
 <br><br><br>
 

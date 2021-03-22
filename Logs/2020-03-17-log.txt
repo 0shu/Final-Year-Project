@@ -15,3 +15,10 @@ Work so far:
     - Descriptions of all the current parts
     - Planned future parts
     - Images & Gifs to spruce it up a bit and communicate more effectively
+(17:02)
+
+Checking back in after doing some work on paper.
+I've identified 9 possible transformation cases.
+Some of which are transaltion based, and some of which are angular based. 
+I have a formula for line to face transformations and a simple one for point to face transformations.
+(20:38)

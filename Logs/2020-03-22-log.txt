@@ -1,0 +1,21 @@
+Kept telling myself I was gonna get a load of work done on the off days between other stuff.
+And then I just went full tunnel vision for engine on thurs/fri and then shaders sat/sun.
+
+Today's plan:
+- Write out definition for simple teatrahedron and then put in place simple 1-dimensional algorithm
+- Scale up simple tetrahedron to work for 3 dimensional vertex translation.
+
+There are 2 types of simple tetrahedron:
+> point-face
+> line-line
+
+The types of complex tetrahedron include:
+> 4-point
+> line-face
+> face-face
+
+(15:02)
+Work so far includes:
+- reinstalled unity and unity hub, this apperas to have fixed problems with my project
+- made new unity project to do the work in
+- zipped up old project and moved it out of directory (kept copy as backup in case of emergency)
