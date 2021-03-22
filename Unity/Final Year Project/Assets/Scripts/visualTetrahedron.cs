@@ -7,6 +7,7 @@ public class visualTetrahedron : MonoBehaviour
 {
     public List<Vector3> m_vertices = new List<Vector3>(4);
     public SelectedVert m_selected;
+    public float m_volume;
     [Range(0.0f, 2.0f)]
     public float m_hitforce = 0.91f;
 
@@ -90,8 +91,56 @@ public class visualTetrahedron : MonoBehaviour
         SetUpLines();
     }
 
+    //returns the difference calculated
+    public float CalcVolume()
+    {
+        //Decide which point based on the m_selected
+        int zero = 0, one = 1, two = 2, three = 3;
+        switch(m_selected)
+        {
+            case SelectedVert.A:
+            {
+                zero = 0;
+                one = 1;
+                two = 3;
+                three = 2;
+                break;
+            }
+            case SelectedVert.B:
+            {
+                zero = 1;
+                one = 0;
+                two = 2;
+                three = 3;
+                break;
+            }
+            case SelectedVert.C:
+            {
+                zero = 2;
+                one = 1;
+                two = 0;
+                three = 3;
+                break;
+            }
+            case SelectedVert.D:
+            {
+                zero = 3;
+                one = 1;
+                two = 2;
+                three = 0;
+                break;
+            }
+        }
+
+        float vol = Vector3.Dot(Vector3.Cross(m_vertices[one] - m_vertices[zero], m_vertices[two] - m_vertices[zero]), m_vertices[three] - m_vertices[zero]);
+        vol -= m_volume;
+        m_volume += vol;
+        return vol;
+    }
+
     public void SetUpLines()
     {
+        CalcVolume();
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
 
         var points = new Vector3[8];

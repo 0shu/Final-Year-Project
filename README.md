@@ -12,6 +12,8 @@ Ideally resulting in a system which just *inputs and outputs a singular mesh*.
 1. [**Simple Primitives**](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-primitives---cuboid--tetrahedron)
    1. [Simple Cuboid](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-cuboid)
    1. [Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-tetrahedron)
+      1. [1D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#1d-simple-tetrahedron)
+      1. [3D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#3d-simple-tetrahedron)
 1. [**Multi-Primitive Shapes**](https://github.com/0shu/Final-Year-Project/new/master?readme=1#multi-primitive-shapes)
 <!--   1. [Triangular Bipyramid](https://github.com/0shu/Final-Year-Project/new/master?readme=1#triangular-bipyramid)
    1. [Tetrahedron Stip](https://github.com/0shu/Final-Year-Project/new/master?readme=1#tetrahedron-strip)
@@ -37,6 +39,14 @@ This is very rudimentary and does not give any ability to change the topology at
 ### Simple Tetrahedron
 A tetrahedron is the simplest possible 3D shape, being made of the smallest number of the simplest possible 2D shape (4 Traingular Faces). In this variation we imagine the tetrahedron as a combination of a face and an opposing vertex.
 When maintaining volume, the distance of the vertex to the face is inversely proportional to the size of the face. Increasing one by a factor of 2 means decreasing the other by a factor of 2.
+
+#### 1D Simple Tetrahedron
+For this version we only care about the vertex as a 1D line away from the plane and thus all transformations apply along that normal line. We apply a scalar force along that normal and expand transformations out around that.
+![In Progress](/Assets/simple-tetrahedron.gif)
+<br><br><br>
+
+#### 3D Simple Tetrahedron
+Because of the way simple tetrahedrons work, height to the oppsing face is the only thing we care about for volume, so with another fucntion we can apply a 3D vector input force instead of just a boring scalar value. This means we can give a translation on a vertex sideways components, we do this by breaking the vector into its normal component and remainder, applying the normal then adding the remainder to the resultant vertex.
 ![In Progress](/Assets/In-progress.png)
 <br><br><br>
 
