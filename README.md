@@ -9,18 +9,18 @@ Ideally resulting in a system which just *inputs and outputs a singular mesh*.
 <br>
 <br>
 ### Contents
-1. [**Simple Primitives**](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-primitives---cuboid--tetrahedron)
-   1. [Simple Cuboid](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-cuboid)
-   1. [Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#simple-tetrahedron)
-      1. [1D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#1d-simple-tetrahedron)
-      1. [3D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#3d-simple-tetrahedron)
-1. [**Multi-Primitive Shapes**](https://github.com/0shu/Final-Year-Project/new/master?readme=1#multi-primitive-shapes)
-<!--   1. [Triangular Bipyramid](https://github.com/0shu/Final-Year-Project/new/master?readme=1#triangular-bipyramid)
-   1. [Tetrahedron Stip](https://github.com/0shu/Final-Year-Project/new/master?readme=1#tetrahedron-strip)
-   1. [Cuboid of tetrahedra](https://github.com/0shu/Final-Year-Project/new/master?readme=1#cuboid-of-tetrahedra)
-1. [**Shape Splitting**](https://github.com/0shu/Final-Year-Project/new/master?readme=1#shape-splitting)
-   1. [Halfing a tetrahedron](https://github.com/0shu/Final-Year-Project/new/master?readme=1#halfing-a-tetrahedron)
-   1. [Cuboid into tetrahedrons](https://github.com/0shu/Final-Year-Project/new/master?readme=1#cuboid-into-tetrahedrons-->
+1. [**Simple Primitives**](https://github.com/0shu/Final-Year-Project#simple-primitives---cuboid--tetrahedron)
+   1. [Simple Cuboid](https://github.com/0shu/Final-Year-Project#simple-cuboid)
+   1. [Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#simple-tetrahedron)
+      1. [1D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#1d-simple-tetrahedron)
+      1. [3D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#3d-simple-tetrahedron)
+1. [**Multi-Primitive Shapes**](https://github.com/0shu/Final-Year-Project#multi-primitive-shapes)
+<!--   1. [Triangular Bipyramid](https://github.com/0shu/Final-Year-Project#triangular-bipyramid)
+   1. [Tetrahedron Stip](https://github.com/0shu/Final-Year-Project#tetrahedron-strip)
+   1. [Cuboid of tetrahedra](https://github.com/0shu/Final-Year-Project#cuboid-of-tetrahedra)
+1. [**Shape Splitting**](https://github.com/0shu/Final-Year-Project#shape-splitting)
+   1. [Halfing a tetrahedron](https://github.com/0shu/Final-Year-Project#halfing-a-tetrahedron)
+   1. [Cuboid into tetrahedrons](https://github.com/0shu/Final-Year-Project#cuboid-into-tetrahedrons-->
 <br>
 <br>
 
