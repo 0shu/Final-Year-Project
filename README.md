@@ -9,12 +9,14 @@ Ideally resulting in a system which just *inputs and outputs a singular mesh*.
 <br>
 <br>
 ### Contents
-1. [**Simple Primitives**](https://github.com/0shu/Final-Year-Project#simple-primitives---cuboid--tetrahedron)
+1. [**Mesh Manipulation**](https://github.com/0shu/Final-Year-Project#mesh-manipulation)
+   1. [Visual Mesh](https://github.com/0shu/Final-Year-Project#visual-mesh)
+3. [**Simple Primitives**](https://github.com/0shu/Final-Year-Project#simple-primitives---cuboid--tetrahedron)
    1. [Simple Cuboid](https://github.com/0shu/Final-Year-Project#simple-cuboid)
    1. [Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#simple-tetrahedron)
       1. [1D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#1d-simple-tetrahedron)
       1. [3D Simple Tetrahedron](https://github.com/0shu/Final-Year-Project#3d-simple-tetrahedron)
-1. [**Multi-Primitive Shapes**](https://github.com/0shu/Final-Year-Project#multi-primitive-shapes)
+4. [**Multi-Primitive Shapes**](https://github.com/0shu/Final-Year-Project#multi-primitive-shapes)
 <!--   1. [Triangular Bipyramid](https://github.com/0shu/Final-Year-Project#triangular-bipyramid)
    1. [Tetrahedron Stip](https://github.com/0shu/Final-Year-Project#tetrahedron-strip)
    1. [Cuboid of tetrahedra](https://github.com/0shu/Final-Year-Project#cuboid-of-tetrahedra)
@@ -23,6 +25,18 @@ Ideally resulting in a system which just *inputs and outputs a singular mesh*.
    1. [Cuboid into tetrahedrons](https://github.com/0shu/Final-Year-Project#cuboid-into-tetrahedrons-->
 <br>
 <br>
+
+## Mesh Manipulation
+This is the main part of the project. We want to be able to modify the mesh by applying local forces/transformations to it, whilst maintaining a constant volume. Ideally these local effects will approximate real world blacksmithing to a degree by using physical simulations.<br>
+Working directly with the mesh is a very complex topic which is hard to grasp and difficult to directly develop upon, so first I've started implementing simpler primitive shapes that allow for mor limited trasnformations in the hopes to combine/expand upon those as the project goes along! (*See* [*Simple Primtives*](https://github.com/0shu/Final-Year-Project#simple-primitives---cuboid--tetrahedron) *below*.)<br>
+![Mesh Manipulation](/Assets/In-progress.png)<br>*
+<br><br>
+
+### Visual Mesh
+I've implemented a simple class to display and connect vertices. This class will have the associated variables/functions to be able to pass a force through the vertices.<br>
+![Mesh Manipulation](/Assets/vertex-mesh.gif)<br>
+Having an easy to see/understand model will help speed up development, and assist in communicating in the report at the end.
+<br><br><br>
 
 ## Simple Primitives - *Cuboid & Tetrahedron*
 The idea here was to start small and create something fast/light which can be strung together.
@@ -42,16 +56,17 @@ When maintaining volume, the distance of the vertex to the face is inversely pro
 
 #### 1D Simple Tetrahedron
 For this version we only care about the vertex as a 1D line away from the plane and thus all transformations apply along that normal line. We apply a scalar force along that normal and expand transformations out around that.
-![In Progress](/Assets/simple-tetrahedron.gif)
+![1D Tetrahedron](/Assets/simple-tetrahedron.gif)
 <br><br><br>
 
 #### 3D Simple Tetrahedron
-Because of the way simple tetrahedrons work, height to the oppsing face is the only thing we care about for volume, so with another fucntion we can apply a 3D vector input force instead of just a boring scalar value. This means we can give a translation on a vertex sideways components, we do this by breaking the vector into its normal component and remainder, applying the normal then adding the remainder to the resultant vertex.
-![In Progress](/Assets/In-progress.png)
+Rather than a proportional 1 dimensional up-down approach this tetrahedron does things the other way around. The vertex is moved along a vector by a certain amount then the proportional difference in height to the opposing face is figured out and the face then expands or contracts to maintain volume.
+![3D Tetrahedron](/Assets/3D-simple-tetrahedron.gif)
 <br><br><br>
 
 ## Multi-Primitive Shapes
-Here's where I'll show the progress of chaining mutiple primitives together by connecting common vertices, edges, and faces.
+Here's where I'll show the progress of chaining mutiple primitives together by connecting common vertices, edges, and faces.<br>
+It's important to break down larger more complex shapes into smaller, more manageable ones.
 ![Not Started](/Assets/Not-started.png)
 <br><br>
 
