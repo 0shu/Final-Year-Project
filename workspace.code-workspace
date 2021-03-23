@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Logs",
+			"path": "Logs"
+		},
+		{
+			"path": "Assets"
+		},
+		{
+			"path": "Unity\\Final Year Project\\Assets\\Scripts"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/*.cs.meta": true
+		}
+	}
+}

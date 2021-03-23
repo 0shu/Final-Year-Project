@@ -1,0 +1,6 @@
+Had a small mental breakdown today whilst trying to fill out a job application.
+But now it's time to get down to work.
+Gonna make a few addtions to the current tetrahedron class.
+Then gonna start making the building blocks of a mesh grid.
+I'm going to take a slightly different approach and make something more visual based.
+This will be easier to show to others, and importantly easier to debug.
