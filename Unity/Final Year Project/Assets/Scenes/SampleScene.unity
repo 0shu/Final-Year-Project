@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 2.25, y: 8.37, z: -3.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -425,13 +425,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_vertices:
-  - {x: -0.6632589, y: -0.08179035, z: -0.63061213}
-  - {x: 0.51372665, y: 1.9305049, z: 0.5479318}
-  - {x: 2.0033755, y: 0.022786597, z: 0.012332857}
-  - {x: 0.013652265, y: 0.08540609, z: 1.8853933}
+  - {x: -0.44505015, y: 0, z: -0.44505018}
+  - {x: 1.0372609, y: 2.2393415, z: 0.5}
+  - {x: 1.9175749, y: 0, z: 0.02747494}
+  - {x: 0.02747494, y: 0, z: 1.9175749}
   m_selected: 1
-  m_volume: 12.000052
-  m_hitforce: 0.96
+  m_volume: 11.999997
+  m_hitforce: 0.23
+  m_direction: {x: 5, y: 3, z: 0}
 --- !u!120 &1679661521
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -473,14 +474,14 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.6632589, y: -0.08179035, z: -0.63061213}
-  - {x: 0.51372665, y: 1.9305049, z: 0.5479318}
-  - {x: 2.0033755, y: 0.022786597, z: 0.012332857}
-  - {x: -0.6632589, y: -0.08179035, z: -0.63061213}
-  - {x: 0.013652265, y: 0.08540609, z: 1.8853933}
-  - {x: 0.51372665, y: 1.9305049, z: 0.5479318}
-  - {x: 2.0033755, y: 0.022786597, z: 0.012332857}
-  - {x: 0.013652265, y: 0.08540609, z: 1.8853933}
+  - {x: -0.44505015, y: 0, z: -0.44505018}
+  - {x: 1.0372609, y: 2.2393415, z: 0.5}
+  - {x: 1.9175749, y: 0, z: 0.02747494}
+  - {x: -0.44505015, y: 0, z: -0.44505018}
+  - {x: 0.02747494, y: 0, z: 1.9175749}
+  - {x: 1.0372609, y: 2.2393415, z: 0.5}
+  - {x: 1.9175749, y: 0, z: 0.02747494}
+  - {x: 0.02747494, y: 0, z: 1.9175749}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -543,10 +544,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679661519}
-  m_LocalRotation: {x: -0.026013715, y: -0.5497766, z: -0.017133346, w: 0.8347308}
-  m_LocalPosition: {x: -0.02, y: 0.59, z: 0.01}
+  m_LocalRotation: {x: 0, y: 0.15272705, z: 0, w: 0.98826844}
+  m_LocalPosition: {x: 1.52, y: 1.4, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -3.57, y: -66.74, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.57, z: 0}

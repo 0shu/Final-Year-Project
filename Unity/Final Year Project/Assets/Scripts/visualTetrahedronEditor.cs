@@ -17,9 +17,14 @@ public class visualTetrahedronEditor : Editor
             myTetra.SetUpLines();
         }
 
-        if(GUILayout.Button("Apply Hit"))
+        if(GUILayout.Button("Apply Hit 1D"))
         {
-            myTetra.ApplyHit1D();
+            myTetra.ApplyHit1D(myTetra.m_hitforce);
+        }
+
+        if(GUILayout.Button("Apply Hit 3D"))
+        {
+            myTetra.ApplyHit3D(myTetra.m_direction, myTetra.m_hitforce);
         }
     }
 }
