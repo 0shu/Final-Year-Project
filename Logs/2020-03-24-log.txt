@@ -1,0 +1,7 @@
+Got a meeting with Jethro at 4:30pm
+Gonna try and make my meshes move with hits so I've got something at least cool to show him.
+
+(14:42)
+Got a function which applies motion through the grid.
+ATM the resulting vertices with nowhere to pass thier energy get moved a lot.
+Ideally I'd like to rein that in a bit.

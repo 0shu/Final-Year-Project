@@ -7,4 +7,7 @@ This will be easier to show to others, and importantly easier to debug.
 
 (19:44)
 Computer just crashed whilst running unity again :(((
-    
+
+(00:08)
+Spent the evening working on the code, the vertices are in place now and they can already chain force down them.
+Now I just have to use that force to translate them along the collision normal, then figure out how much the volume change because of that!

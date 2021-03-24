@@ -28,5 +28,10 @@ public class meshVertEditor : Editor
         {
             myVert.CalcForceSplit(myVert.m_inputForce, myVert.m_hitForce);
         }
+
+        if(GUILayout.Button("Apply Motion"))
+        {
+            myVert.ApplySquash(myVert.m_inputForce, 0.1f);
+        }
     }
 }

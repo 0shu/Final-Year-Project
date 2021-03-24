@@ -34,6 +34,29 @@ public class meshVert : MonoBehaviour
         }
     }
 
+    public void ApplySquash(Vector3 input, float scalar)
+    {
+        Vector3 motion = Vector3.Normalize(input) * scalar * m_storedForce;
+
+        List<float> l_dots = new List<float>();
+        float total = 1;
+        foreach(meshVert vert in m_verts)
+        {
+            float angle = Vector3.Dot(input, vert.transform.position - transform.position);
+            l_dots.Add(angle);
+            if(angle > 0) total += angle;
+        }
+
+        for(int i = 0; i < l_dots.Count; i++)
+        {
+            if(l_dots[i] > 0) m_verts[i].ApplySquash(input, scalar);
+        }
+
+        transform.Translate(motion);
+        m_storedForce = 0;
+        UpdateLines(true);
+    }
+
     public void CalcForceSplit(Vector3 input, float force)
     {
         //First we take away the heat variable
@@ -57,6 +80,7 @@ public class meshVert : MonoBehaviour
             if(l_dots[i] > 0) m_verts[i].CalcForceSplit(input, newForce * (l_dots[i] / total));
         }
         m_storedForce += newForce * (1 / total);
+        UpdateLines(false);
     }
 
     public void ConnectVertex(meshVert vert)
