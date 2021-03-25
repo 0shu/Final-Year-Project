@@ -40,8 +40,6 @@ Gonna implement a simple size calculator for tetras to make sure its always resi
 
 (20:34)
 Okay I think I've done enough for today, 5 hours or so.
-I'd love to do more but I'm already feeling fatigued and like throwing up. Maybe I've got long covid?
-Either way existence is hell, my brain is full of static, and I'm done.
 
 Tomorrows goals:
 - impl 3D simple tetrahedron

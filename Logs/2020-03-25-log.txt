@@ -1,0 +1,41 @@
+(14:02)
+Time to do some work on this module, just had a good lunch~
+
+Yesterday I made a simple function for applying motion through the grid.
+Things I need to do include:
+    - Writing up about meeting with jethro and submitting form.
+    - Write up onto github about first hit algorithm
+    - Split visual mesh and motion component into separate classes so the visual mesh can be used with different algorithms.
+
+Limitations of the first mesh and possible solutions:
+    Issue: long run time in depth first algorithm causes program to hang.
+    Component flaws:
+        - Slow, fast expanding alogorithm. 
+        - Tied into UI function, program has to wait.
+    Solutions: 
+        Speed up algorithm and use less expansive ideas.
+        Use the function in co-routines so they can be run asyncronously and paralellized.
+        Compute shader perhaps.
+        Use different kinds of mesh and propagation techniques.
+
+    Issue: last particle in the chain often gets moved disproportionately more than the others.
+    Component flaws:
+        - Movement is based on the number of children and should be independant
+        - Child energy is derived as fraction with all other child energies
+        - Heat absorbtion is proportional so there is always some resultant force
+        - Children are always sent force there's no cutoff
+    Solutions:
+        Introduce non-proportional factor to heat absorbtion.
+        Output energy is derived as fixed amount not proportional.
+        Cutoff value check for if the force is not high enough to cause movement.
+        Make movement of the mesh non- dependant on child entitites.
+
+There's a flaw with my method I've realised.
+I've been imagining metals as so large that they hold their own position (like in industrial applications),
+but of course on small forging scales this isnt true.
+Blacksmiths apply force with a hammer, but they also use tongs to hold part of the piece stationary,
+and use an anvil to offer resistive force to the piece anmd squash it from multiple directions.
+
+I've seen online there's a blacksmith simulator game called "Fantasy Blacksmith" but it has very rudamentary techniques and does not really simulate anything very well.
+It gets the aesthetic right, but the mechanics wrong.
+It's parameter based but not physics based
