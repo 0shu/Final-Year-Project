@@ -38,4 +38,16 @@ and use an anvil to offer resistive force to the piece anmd squash it from multi
 
 I've seen online there's a blacksmith simulator game called "Fantasy Blacksmith" but it has very rudamentary techniques and does not really simulate anything very well.
 It gets the aesthetic right, but the mechanics wrong.
-It's parameter based but not physics based
+It's parameter based but not physics based.
+
+(18:34)
+Gonna call it a day today actually.
+Didn't get any useful code written but I did a lot of on paper theorising and looked at some more fottage of forging.
+
+I had a look into measuring mesh overlaps with constructive solid geometry "CSG".
+It looks like it might be a dud but I'm going to do a little more research before calling it done.
+
+I'm thinking of potentially splitting the simulation to several different "modes".
+Sheet metal, billets, and then doing detail work all seem to have different processes/mechanics.
+Getting a few of them done differently and simply might be useful for demoing stuff.
+Of course the end goal is to have a single system that does physical simulations and can work with any type of mesh.
