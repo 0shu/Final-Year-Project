@@ -1,0 +1,9 @@
+(14:57)
+Didn't do any work yesterday as was super busy on engine in the day and then totally burned out in the evening.
+
+Stuff to get done today as per the theorising/reflection from yesterday:
+    - Separate out visual and mechanical aspects of vertex mesh stuff I already made
+    - Write up meeting reports (x2) for meetings with jethro
+
+    - make method for measuring volume of unity mesh
+    - get it to run on a compute shader in real time

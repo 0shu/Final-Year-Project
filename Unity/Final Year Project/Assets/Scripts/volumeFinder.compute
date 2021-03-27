@@ -1,0 +1,25 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+struct Tetra
+{
+    float3 a; //First vertex of face
+    float3 b; //Next vertex of face
+    float3 c; //Final vertex of face
+    float vol; //Output volume
+};
+
+RWStructuredBuffer<Tetra> tetras;
+float origin;
+
+[numthreads(10,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    Tetra tetra = tetras[id.x];
+    float3 crossP = cross(tetra.b - tetra.a, tetra.c - tetra.a);
+    float3 height = origin - tetra.a;
+    tetra.vol = abs(dot(crossP, height) / 6.0);
+    if(dot(normalize(crossP), -normalize(height)) < 0) tetra.vol = - tetra.vol;
+
+    tetras[id.x] = tetra;
+}
