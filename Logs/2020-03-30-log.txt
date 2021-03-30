@@ -1,0 +1,11 @@
+(7:00)
+Good morning world, lets see if wwaking up earlier will do me any better!
+The sun has not yet risen over the buildings and yet there's guys up already exercising at the park.
+Gotta follow in that example and make my own start nice and early~
+
+So assessment of what's been done:
+I've got a compute shader that compiles and runs!
+It's giving me a number back, but the number seems wrong, moving the origin around proves that it is wrong as the number changes based on the origin.
+So for whatever reason one of the 12 triangles is giving me an inverse value, other than that my face selection seems to be working.
+It only seems to happen when I move the origin along the x axis.
+I could, try and change how faces are worked out, or I could use normals of the verts to decide.
