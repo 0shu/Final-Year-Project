@@ -10,7 +10,7 @@ struct Tetra
 };
 
 RWStructuredBuffer<Tetra> tetras;
-float3 origin;
+float3 origin; 
 
 [numthreads(10,1,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
@@ -19,7 +19,8 @@ void CSMain (uint3 id : SV_DispatchThreadID)
     float3 crossP = cross(tetra.b - tetra.a, tetra.c - tetra.a);
     float3 height = origin - tetra.a;
     tetra.vol = abs(dot(crossP, height) / 6.0);
+    //tetra.vol = id.x;
     if(dot(normalize(crossP), -normalize(height)) < 0) tetra.vol = - tetra.vol;
 
-    tetras[id.x] = tetra;
+    tetras[id.x].vol += tetra.vol;
 }

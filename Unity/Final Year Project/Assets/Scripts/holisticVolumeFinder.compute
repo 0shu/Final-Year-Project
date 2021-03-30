@@ -4,11 +4,30 @@
 RWStructuredBuffer<float3> positions;
 RWStructuredBuffer<float3> normals;
 RWStructuredBuffer<int> indices;
+RWStructuredBuffer<float> volumes;
+float3 origin;
 
 [numthreads(10,1,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
-    // TODO: insert actual code here!
+    // Get edges of object
+    uint startPoint = id.x * 3;
+    float3 edgeA = positions[indices[startPoint + 1]] - positions[indices[startPoint]];
+    float3 edgeB = positions[indices[startPoint + 2]] - positions[indices[startPoint]];
+    float3 edgeC = origin - positions[indices[startPoint]];
 
-    
+    //Find out the absolute volume irrespective of direction
+    float vol = dot(cross(edgeA, edgeB), edgeC) / 6.0;
+
+    volumes[id.x] += vol;
+
+    //Get the average positions and use to calculate if its facing towards or away from the origin
+    //float3 avgPos = (positions[indices[startPoint]] + positions[indices[startPoint + 1]] + positions[indices[startPoint + 2]]) / 3.0;
+    //float3 avgNorm = (normals[indices[startPoint]] + normals[indices[startPoint + 1]] + normals[indices[startPoint + 2]]) / 3.0;
+    //float3 vec = normalize(avgPos - origin);
+    //float direction = dot(avgNorm, vec);
+
+    //if(direction > 0) volumes[id.x] = vol;
+    //else volumes[id.x] = -vol;
+
 }

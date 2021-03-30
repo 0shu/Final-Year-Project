@@ -9,3 +9,21 @@ It's giving me a number back, but the number seems wrong, moving the origin arou
 So for whatever reason one of the 12 triangles is giving me an inverse value, other than that my face selection seems to be working.
 It only seems to happen when I move the origin along the x axis.
 I could, try and change how faces are worked out, or I could use normals of the verts to decide.
+
+(8:23)
+I am an idiot, of the highest order.
+After making the new volume finder script I was just trying to figure out how to write out the volumes to a structured when I realised something.
+"What was to stop me overwriting the already written output values in this structured buffer?"
+And then it dawned on me, I was writing to specific pieces of the buffer without considering if I was overwriting others.
+
+(8:50)
+PC just crashed on me again T-T 
+Used that as an opportunity to get more coffee and sweep the floors at least~
+
+(10:09)
+Okay after a little more work I seem to know whats going on with the computeshaders
+so it does work how i previously thought as the ids do go up between runs.
+unfortunately the number of objects in the buffer needs to be an integer multiple of the number of threads.
+Basically I need to make sure I'm telling it to run the correct number of times and round stuff up if not.
+
+TODO: Now that I've understood more about compute shaders I ought to use the more efficient method by directly giving the GPU the mesh info

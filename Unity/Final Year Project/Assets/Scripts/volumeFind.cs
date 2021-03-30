@@ -16,6 +16,7 @@ public class volumeFind : MonoBehaviour
     public List<Tetra> m_tetras = new List<Tetra>();
     public Mesh m_mesh;
     public Vector3 m_origin = new Vector3();
+    public float[] m_vols = new float[20];
     public float m_total = 0;
     public int m_faces = 0;
     // Start is called before the first frame update
@@ -41,18 +42,20 @@ public class volumeFind : MonoBehaviour
         float[] origin = {m_origin.x, m_origin.y, m_origin.z};
         m_compute.SetBuffer(0, "tetras", tetraBuffer);
         m_compute.SetFloats("origin", origin);
-        m_compute.Dispatch(0, m_tetras.Count / 10, 1, 1);
+        m_compute.Dispatch(0, Mathf.CeilToInt(m_tetras.Count / 10.0f), 1, 1);
 
         Tetra[] newTetras = new Tetra[m_faces];
         tetraBuffer.GetData(newTetras);
 
-        m_tetras = new List<Tetra>(newTetras);
 
         m_total = 0.0f;
-        for (int i = 0; i < m_tetras.Count; i++)
+        for (int i = 0; i < newTetras.Length; i++)
         {
             m_total += newTetras[i].vol;
+            m_vols[i] = newTetras[i].vol;
+            newTetras[i].vol = 0;
         }
+        m_tetras = new List<Tetra>(newTetras);
 
         tetraBuffer.Dispose();
         Debug.Log("Finished Calculating Volume!");
