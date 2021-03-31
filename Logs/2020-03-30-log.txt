@@ -27,3 +27,5 @@ unfortunately the number of objects in the buffer needs to be an integer multipl
 Basically I need to make sure I'm telling it to run the correct number of times and round stuff up if not.
 
 TODO: Now that I've understood more about compute shaders I ought to use the more efficient method by directly giving the GPU the mesh info
+    - More efficient direct buffer version.
+    - Bounding box cull version
