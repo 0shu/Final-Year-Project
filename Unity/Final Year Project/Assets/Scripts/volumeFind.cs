@@ -39,13 +39,22 @@ public class volumeFind : MonoBehaviour
         Debug.Log("Starting to get mesh!");
         Vector3[] verts = m_mesh.vertices;
         int[] indices = m_mesh.triangles;
+
+        Debug.Log("Verts: " + verts.Length);
+        Debug.Log("Tris: " + indices.Length);
+
         float[] volumes = new float[indices.Length];
+        for (int i = 0; i < volumes.Length; i++)
+        {
+            volumes[i] = 0;
+        }
 
         ComputeBuffer vertBuffer = new ComputeBuffer(verts.Length, sizeof(float) * 3);
         ComputeBuffer indiceBuffer = new ComputeBuffer(indices.Length, sizeof(int));
         ComputeBuffer volumeBuffer = new ComputeBuffer(volumes.Length, sizeof(float));
         vertBuffer.SetData(verts);
         indiceBuffer.SetData(indices);
+        volumeBuffer.SetData(volumes);
 
         float[] origin = {m_origin.x, m_origin.y, m_origin.z};
         m_compute.SetFloats("origin", origin);
@@ -66,7 +75,7 @@ public class volumeFind : MonoBehaviour
         vertBuffer.Dispose();
         indiceBuffer.Dispose();
         volumeBuffer.Dispose();
-        Debug.Log("Finished Calculating Volume!");
+        Debug.Log("Finished Calculating Volume! " + m_arraysVol);
     }
 
     public void VolOnGPU()

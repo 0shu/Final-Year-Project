@@ -1,0 +1,12 @@
+Unity keeps bloody crashing and its driving me round the bend.
+Every other module gets me SO MUCH more progress per time spent.
+
+I had a decent plan on the 27th.
+Then I've been held up by a load of rubbish.
+
+So to reiterate:
+- Write up meeting reports and submit on blackboard
+- Get the compute shader working with multiple buffers somehow?
+- Get the compute shader detecting only working on indices within a mesh inside of a certain bounding box
+- Write up understandable version of the theory and put on github
+- Go for a walk because I've been stuck indoors too long.

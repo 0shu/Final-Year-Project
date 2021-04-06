@@ -1,9 +1,9 @@
 // Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel CSMain
 
-RWStructuredBuffer<float3> positions;
-RWStructuredBuffer<int> indices;
-RWStructuredBuffer<float> volumes;
+RWBuffer<float3> positions;
+RWBuffer<int> indices;
+RWBuffer<float> volumes;
 float3 origin;
 
 [numthreads(10,1,1)]
@@ -11,7 +11,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
 {
     // Get edges of object
     uint startPoint = id.x * 3;
-    if(startPoint < indices.Length - 2)
+    if(startPoint < (indices.Length - 2))
     {
         float3 edgeA = positions[indices[startPoint + 1]] - positions[indices[startPoint]];
         float3 edgeB = positions[indices[startPoint + 2]] - positions[indices[startPoint]];
@@ -20,7 +20,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
         //Find out the absolute volume irrespective of direction
         float vol = dot(cross(edgeA, edgeB), edgeC) / 6.0;
 
-        volumes[id.x] += vol;
+        volumes[0] = vol;
     }
     
 }
