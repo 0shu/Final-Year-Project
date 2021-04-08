@@ -1,0 +1,6 @@
+(13:15)
+After considerable annoyance and anguish I've finally found a solution.
+My computer kept irratically crashing and causing me problems so I've decided to start working in the university instead.
+This of course carries and elevated covid risk but its the only thing I can do to make sure I get enough hours on this project.
+
+First task is to clone all my files and make sure the different projects all build and run
