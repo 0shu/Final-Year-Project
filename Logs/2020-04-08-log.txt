@@ -3,4 +3,27 @@ After considerable annoyance and anguish I've finally found a solution.
 My computer kept irratically crashing and causing me problems so I've decided to start working in the university instead.
 This of course carries and elevated covid risk but its the only thing I can do to make sure I get enough hours on this project.
 
-First task is to clone all my files and make sure the different projects all build and run
+First task is to clone all my files and make sure the different projects all build and run.
+
+(13:45)
+Game Engine Runs sucessfully!
+
+(13:56)
+Shaders Runs successfully!
+
+(14:06)
+FYP Doesnt run T-T
+And it seems like its going to be a real hassle to get it to work...
+I feel like im constantly between a rock and ahard place with this project!
+I've been wierdly forced by computer errors to take a whole week off when i cant really afford even a single day off.
+
+I ought to assess where I am and what I've got and where I need to be.
+
+Its just under a month to submission.
+I've got a projcet that can visualise a mesh and measure a mesh volume.
+
+What I need is a simulation of blacksmithing. The ability to manipulate a mesh.
+I also need a 8000 word report about the project. Which I've got even less on, at least I've got a git readme but that's nowhere near enough.
+There's no use being depressed gotta keep upbeat and keep moving forwards!
+Since uni is a being a bust I just gotta go home and make sure to keep committing regularly to counter the PC problems.
+I gotta figure out some priorities and get writing a report asap!
