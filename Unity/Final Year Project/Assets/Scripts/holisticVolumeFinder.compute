@@ -20,7 +20,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
         //Find out the absolute volume irrespective of direction
         float vol = dot(cross(edgeA, edgeB), edgeC) / 6.0;
 
-        volumes[0] = vol;
+        volumes[id.x * 3] = vol;
     }
     
 }

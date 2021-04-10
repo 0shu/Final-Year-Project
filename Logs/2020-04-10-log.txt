@@ -1,0 +1,25 @@
+(18:27)
+Here we go!
+I'm ready to do another few hours of work!
+Just installing the latest new version of Unity.
+Since I'm forced to update by one level I might as well update to the latest, I have a backup in case it doesnt work.
+
+So, the RW buffer seems to work when its my own struct of tetrahedrons, but not when its buffers of verts and indices.
+
+Strategy has been sorely lacking in this project and this year as a whole.
+That I guess I am to blame for
+
+(19:52)
+Oh my gosh I spent way too long distracted, my bad.
+Thought I'd just get a little done whilst I awaited the unity download and boom, more than an hour gone!
+I must press on!
+
+(20:34)
+Goddammit just crashed my PC again.
+This stuff is really frustrating.
+
+(22:11)
+Days work:
+- Tried playing about getting compute shader to work and had little to no success.
+- I think I need to start off really simply, having multiple buffers just doesnt seem to be working.
+- This might be fast becoming a dead end and just wasting tons of important time.
