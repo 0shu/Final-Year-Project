@@ -1,0 +1,8 @@
+(20:07)
+Yesterday's work was good, but I decided to scrap a large portion of it to write up a better outline of how the report should be.
+Still have the old version saved in case i wanna go back and use some of it.
+Was a good warmup either way!
+The new report will be structured well, and aesthetics of titles and the contents page have been more considered!
+
+Decided to split different mechnics into their own scenes to play with for now.
+Made a main menu scene in the same style as the report!
