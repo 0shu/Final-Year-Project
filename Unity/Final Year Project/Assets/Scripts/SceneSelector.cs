@@ -23,7 +23,7 @@ public class SceneSelector : MonoBehaviour
     public void LoadScene(string name)
     {
         Debug.Log("Loading Scene: " + name);
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(name, LoadSceneMode.Single);
     }
 
     public void Quit()

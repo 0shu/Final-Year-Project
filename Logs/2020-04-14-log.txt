@@ -1,0 +1,11 @@
+(21:33)
+Expanded on functionality built up yesterday
+
+Now have physical level which shows what you're looking at and the direction of the normal of that face.
+Calculates volume upon looking over something.
+
+This rolls together the point locator and volume calculator as one thing.
+This is useful towards reaching the end goal of having everything in one sandbox level anyways!
+
+Next I need to look at getting the simple primitives working to work with the point locator.
+Essentially I need to make functions which apply hits in directions based on a simple position/normal.

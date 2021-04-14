@@ -21,18 +21,18 @@ public class PointLocator : MonoBehaviour
     void Update()
     {
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0) RaycastMouseHit();
+        if (Input.GetMouseButtonDown(0) && m_target.tag == m_measurable) 
+        {
+            m_target.GetComponent<SimpleMesh>().ApplyHit(m_position, m_normal);
+        }
     }
 
     void RaycastMouseHit()
     {
-        //Debug.Log("Starting raycast!");
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, 999f, ~m_self))
         {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow);
-            //Debug.Log("Hit Detected! " + hit.point.x + " " + hit.point.y + " " + hit.point.z);
-
             m_position = hit.point;
             m_normal = hit.normal;
             m_pointer.transform.position = m_position;
@@ -46,10 +46,6 @@ public class PointLocator : MonoBehaviour
                 if(m_target.tag == m_measurable) m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
                 else m_calc.ResetText();
             }
-        }
-        else
-        {
-            Debug.DrawRay(ray.origin, ray.direction * 1000, Color.yellow);
         }
     }
 
