@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VolumeCalculator : MonoBehaviour
 {
+    public Text m_text;
     public Mesh m_mesh;
     public Vector3 m_origin = new Vector3();
     public float m_volume = 0;
@@ -32,6 +34,11 @@ public class VolumeCalculator : MonoBehaviour
         StartCoroutine("Calculate");
     }
 
+    public void ResetText()
+    {
+        if(m_text != null) m_text.text = "";
+    }
+
     IEnumerator Calculate()
     {
         Debug.Log("Starting Volume Calculation!");
@@ -54,7 +61,9 @@ public class VolumeCalculator : MonoBehaviour
             float vol = Vector3.Dot(Vector3.Cross(edgeA, edgeB), edgeC) / 6.0f;
             m_volume += vol;
 
-            yield return null;
+            if(m_text != null) m_text.text = "Vol: " + m_volume.ToString("#.00000");
+
+            //yield return null;
         }
 
         yield return null;
