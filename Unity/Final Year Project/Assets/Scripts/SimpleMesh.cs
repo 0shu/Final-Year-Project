@@ -36,6 +36,22 @@ public class SimpleMesh : MonoBehaviour
         else
         {
             Debug.Log("Normal is not on the axes!");
+
+            Matrix4x4 rot = Matrix4x4.LookAt(Vector3.zero, normal, Vector3.up);
+            Matrix4x4 inv = rot.inverse;
+
+            for(int i = 0; i < verts.Length; i++)
+            {
+                Vector3 difference = verts[i] - center;
+                Vector3 point = inv.MultiplyPoint3x4(difference);
+                point = new Vector3(point.x * newTwo, point.y * newTwo, point.z * newOne);
+                verts[i] = center + rot.MultiplyPoint3x4(point);
+            }
+
+            m_mesh.vertices = verts;
+            MeshCollider colli = GetComponent<MeshCollider>();
+            colli.sharedMesh = m_mesh;
+
             return;
         }
 

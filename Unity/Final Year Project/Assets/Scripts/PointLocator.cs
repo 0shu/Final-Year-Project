@@ -24,6 +24,7 @@ public class PointLocator : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && m_target.tag == m_measurable) 
         {
             m_target.GetComponent<SimpleMesh>().ApplyHit(m_position, m_normal);
+            m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
         }
     }
 
