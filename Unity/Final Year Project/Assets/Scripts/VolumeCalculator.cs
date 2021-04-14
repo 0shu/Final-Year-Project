@@ -11,13 +11,20 @@ public class VolumeCalculator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CalcVolume();
+        //CalcVolume();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void CalcVolume(Mesh mesh)
+    {
+        m_mesh = mesh;
+
+        CalcVolume();
     }
 
     public void CalcVolume()
@@ -27,6 +34,7 @@ public class VolumeCalculator : MonoBehaviour
 
     IEnumerator Calculate()
     {
+        Debug.Log("Starting Volume Calculation!");
         Vector3[] positions = m_mesh.vertices;
         int[] indices = m_mesh.triangles;
         m_volume = 0;
@@ -46,7 +54,7 @@ public class VolumeCalculator : MonoBehaviour
             float vol = Vector3.Dot(Vector3.Cross(edgeA, edgeB), edgeC) / 6.0f;
             m_volume += vol;
 
-            //yield return null;
+            yield return null;
         }
 
         yield return null;
