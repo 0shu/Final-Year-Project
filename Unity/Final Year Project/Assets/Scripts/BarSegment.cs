@@ -17,7 +17,7 @@ public class BarSegment : MonoBehaviour
             m_hit = false;
 
             float root = Mathf.Pow(m_factor, 0.5f);
-            scale(new Vector3(root, 1.0f / m_factor, root));
+            scale(new Vector3(root, 1 / m_factor, root));
         }
     }
 

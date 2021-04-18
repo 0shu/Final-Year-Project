@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshCollider))]
 public class SegmentedBar : MonoBehaviour
 {
     public Mesh m_mesh; //Mesh to draw the solid
@@ -68,75 +69,102 @@ public class SegmentedBar : MonoBehaviour
     public void ConstructMesh()
     {
         List<Vector3> verts = new List<Vector3>();
+        List<Vector3> actual = new List<Vector3>();
+        List<Vector3> normals = new List<Vector3>();
         List<int> indices = new List<int>();
 
         foreach(BarSegment segment in m_segments)
         {
-            verts.Add(new Vector3(segment.transform.position.x, segment.transform.position.y - segment.m_size.y, segment.transform.position.z - segment.m_size.z));
-            verts.Add(new Vector3(segment.transform.position.x, segment.transform.position.y - segment.m_size.y, segment.transform.position.z + segment.m_size.z));
-            verts.Add(new Vector3(segment.transform.position.x, segment.transform.position.y + segment.m_size.y, segment.transform.position.z + segment.m_size.z));
-            verts.Add(new Vector3(segment.transform.position.x, segment.transform.position.y + segment.m_size.y, segment.transform.position.z - segment.m_size.z));
+            verts.Add(new Vector3(segment.transform.localPosition.x, segment.transform.localPosition.y - segment.m_size.y, segment.transform.localPosition.z - segment.m_size.z));
+            verts.Add(new Vector3(segment.transform.localPosition.x, segment.transform.localPosition.y - segment.m_size.y, segment.transform.localPosition.z + segment.m_size.z));
+            verts.Add(new Vector3(segment.transform.localPosition.x, segment.transform.localPosition.y + segment.m_size.y, segment.transform.localPosition.z + segment.m_size.z));
+            verts.Add(new Vector3(segment.transform.localPosition.x, segment.transform.localPosition.y + segment.m_size.y, segment.transform.localPosition.z - segment.m_size.z));
         }
 
 
         //Initial front face
-        indices.Add(0);
-        indices.Add(1);
-        indices.Add(2);
-        indices.Add(0);
-        indices.Add(2);
-        indices.Add(3);
+        actual.Add(verts[0]);
+        actual.Add(verts[1]);
+        actual.Add(verts[2]);
+
+        actual.Add(verts[0]);
+        actual.Add(verts[2]);
+        actual.Add(verts[3]);
+
+
 
         //Intermediate
         for(int i = 1 ; i < m_segments.Count; i++)
         {
             int start = (i * 4) - 4;
 
-            indices.Add(start + 0);
-            indices.Add(start + 4);
-            indices.Add(start + 1);
+            actual.Add(verts[start + 0]);
+            actual.Add(verts[start + 4]);
+            actual.Add(verts[start + 1]);
 
-            indices.Add(start + 4);
-            indices.Add(start + 5);
-            indices.Add(start + 1);
+            actual.Add(verts[start + 1]);
+            actual.Add(verts[start + 4]);
+            actual.Add(verts[start + 5]);
 
-            indices.Add(start + 1);
-            indices.Add(start + 5);
-            indices.Add(start + 2);
+            actual.Add(verts[start + 1]);
+            actual.Add(verts[start + 5]);
+            actual.Add(verts[start + 2]);
 
-            indices.Add(start + 5);
-            indices.Add(start + 6);
-            indices.Add(start + 2);
+            actual.Add(verts[start + 2]);
+            actual.Add(verts[start + 5]);
+            actual.Add(verts[start + 6]);
 
-            indices.Add(start + 2);
-            indices.Add(start + 6);
-            indices.Add(start + 3);
+            actual.Add(verts[start + 2]);
+            actual.Add(verts[start + 6]);
+            actual.Add(verts[start + 3]);
 
-            indices.Add(start + 6);
-            indices.Add(start + 7);
-            indices.Add(start + 3);
+            actual.Add(verts[start + 3]);
+            actual.Add(verts[start + 6]);
+            actual.Add(verts[start + 7]);
 
-            indices.Add(start + 3);
-            indices.Add(start + 7);
-            indices.Add(start + 0);
+            actual.Add(verts[start + 3]);
+            actual.Add(verts[start + 7]);
+            actual.Add(verts[start + 0]);
 
-            indices.Add(start + 7);
-            indices.Add(start + 4);
-            indices.Add(start + 0);
+            actual.Add(verts[start + 0]);
+            actual.Add(verts[start + 7]);
+            actual.Add(verts[start + 4]);
         }
 
         int amt = verts.Count - 4;
 
         //Final back face
-        indices.Add(amt + 0);
-        indices.Add(amt + 2);
-        indices.Add(amt + 1);
-        indices.Add(amt + 0);
-        indices.Add(amt + 3);
-        indices.Add(amt + 2);
+        actual.Add(verts[amt + 0]);
+        actual.Add(verts[amt + 2]);
+        actual.Add(verts[amt + 1]);
 
+        actual.Add(verts[amt + 0]);
+        actual.Add(verts[amt + 3]);
+        actual.Add(verts[amt + 2]);
 
-        m_mesh.vertices = verts.ToArray();
+        foreach(Vector3 pos in actual)
+        {
+            indices.Add(indices.Count);
+        }
+
+        for(int i = 0; i < (actual.Count / 3.0); i++)
+        {
+            int posi = i * 3;
+
+            Vector3 edgeA = actual[posi + 2] - actual[posi];
+            Vector3 edgeB = actual[posi + 1] - actual[posi];
+
+            Vector3 norm = Vector3.Cross(edgeA, edgeB);
+
+            normals.Add(norm);
+            normals.Add(norm);
+            normals.Add(norm);
+        }
+
+        m_mesh.vertices = actual.ToArray();
         m_mesh.triangles = indices.ToArray();
+        m_mesh.normals = normals.ToArray();
+
+        GetComponent<MeshCollider>().sharedMesh = m_mesh;
     }
 }
