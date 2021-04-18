@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 565914600}
   - component: {fileID: 565914599}
   m_Layer: 5
-  m_Name: Point Locator
+  m_Name: Simple Tetrahedrons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scenes/Locator
+          m_StringArgument: Scenes/SimpleTetra
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &565914600
@@ -717,7 +717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Point Locator
+  m_Text: Simple Tetrahedrons
 --- !u!222 &565914601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 1663655223}
   - component: {fileID: 1663655222}
   m_Layer: 5
-  m_Name: Volume calculator
+  m_Name: Segmented Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Volume
+          m_StringArgument: Scenes/SegmentedBar
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1663655223
@@ -896,7 +896,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Volume Calculator
+  m_Text: Segmented Bar
 --- !u!222 &1663655224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 1793833073}
   - component: {fileID: 1793833072}
   m_Layer: 5
-  m_Name: Simple Primitives
+  m_Name: Cubic Scaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +996,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scenes/Primitives
+          m_StringArgument: Scenes/CubicScaling
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1793833073
@@ -1032,7 +1032,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Simple Primitives
+  m_Text: Cubic Scaling
 --- !u!222 &1793833074
 CanvasRenderer:
   m_ObjectHideFlags: 0

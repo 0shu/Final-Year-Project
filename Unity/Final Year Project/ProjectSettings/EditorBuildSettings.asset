@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Sandbox.unity
     guid: f92db42477743e143affd299555b97b9
   - enabled: 1
-    path: Assets/Scenes/Primitives.unity
-    guid: 9aa15d451d734a745822d62e066d02aa
+    path: Assets/Scenes/CubicScaling.unity
+    guid: c8bc2b0b70e175241829ec15935acd69
   - enabled: 1
-    path: Assets/Scenes/Locator.unity
+    path: Assets/Scenes/SimpleTetra.unity
     guid: 9dc2285c8a1644244a82e1004aa5b6db
   - enabled: 1
-    path: Assets/Scenes/Volume.unity
-    guid: bae709f201073914da6c27be03657ffc
+    path: Assets/Scenes/SegmentedBar.unity
+    guid: 05113897fb863c74b965c68ec5d229d7
   m_configObjects: {}

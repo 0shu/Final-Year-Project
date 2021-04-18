@@ -1,0 +1,7 @@
+(16:25)
+Last time was rather productive, very happy with myself.
+I made the volume calculator work with the point locator and gave it an interesting UI.
+Then I made it easy to apply cubic scaling method to individual vertices across any normal.
+
+The plan for this time is to implement the simple segmented bar method.
+The idea of this method is that i break up a shape into a series of connected planes.
