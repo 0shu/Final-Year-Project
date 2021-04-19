@@ -187,7 +187,5 @@ public class SegmentedBar : MonoBehaviour
         m_mesh.normals = normals.ToArray();
 
         GetComponent<MeshCollider>().sharedMesh = m_mesh;
-
-        //if(transform.parent.GetComponent<MeshCollider>()) transform.parent.GetComponent<MeshCollider>().sharedMesh = m_mesh;
     }
 }

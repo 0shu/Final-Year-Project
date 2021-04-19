@@ -1,0 +1,14 @@
+(14:37)
+Got a meeting with Jethro soon.
+
+Today I added functionality so that the segmented bar works by being clicked with the point locator active.
+It can also feel the affects of physics.
+Also added physics to the cubic scaling objects.
+
+Next goals are to add the simple tetrahedron methods into the program and to expand on that functionality.
+
+Then to put all existing functions into one scene (Sandbox).
+
+Then to try attaching different sub-meshes together into a larger mesh.
+
+Also got to write 8000 words and expand the report plan to include current/future work.
