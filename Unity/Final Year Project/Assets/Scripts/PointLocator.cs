@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PointLocator : MonoBehaviour
 {
+    public bool m_hitter = true;
     public VolumeCalculator m_calc;
     public LayerMask m_self;
     public GameObject m_pointer;
@@ -23,7 +24,11 @@ public class PointLocator : MonoBehaviour
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0) RaycastMouseHit();
         if (Input.GetMouseButtonDown(0) && m_target.tag == m_measurable) 
         {
-            m_target.GetComponent<SimpleMesh>().ApplyHit(m_position, m_normal);
+            if(m_hitter) 
+            {
+                if(m_target.GetComponent<SimpleMesh>() != null) m_target.GetComponent<SimpleMesh>().ApplyHit(m_position, m_normal);
+                else if(m_target.GetComponent<SegmentedBar>() != null) m_target.GetComponent<SegmentedBar>().TakeHit(m_position, m_normal);
+            }
             m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
         }
     }

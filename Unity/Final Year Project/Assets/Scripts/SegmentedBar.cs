@@ -29,6 +29,27 @@ public class SegmentedBar : MonoBehaviour
         UpdateAround(m_segments.Count / 2);
     }
 
+    public void TakeHit(Vector3 pos, Vector3 norm)
+    {
+        BarSegment closest = new BarSegment();
+        float distance = 0;
+
+        Vector3 newNorm = transform.worldToLocalMatrix * norm;
+
+        //Go through and find closest segment to hit
+        foreach(BarSegment segment in m_segments)
+        {
+            if(distance == 0 || distance > Vector3.Distance(pos, segment.transform.position))
+            {
+                closest = segment;
+                distance = Vector3.Distance(pos, segment.transform.position);
+            }
+        }
+
+        //Tell closest to recieve hit
+        closest.ApplyHit(newNorm, 1.0f);
+    }
+
     public void UpdateAround(int index)
     {
         if(m_segments.Count <= index)
@@ -166,5 +187,7 @@ public class SegmentedBar : MonoBehaviour
         m_mesh.normals = normals.ToArray();
 
         GetComponent<MeshCollider>().sharedMesh = m_mesh;
+
+        //if(transform.parent.GetComponent<MeshCollider>()) transform.parent.GetComponent<MeshCollider>().sharedMesh = m_mesh;
     }
 }
