@@ -1,0 +1,23 @@
+(02:05)
+Damn, its been a while since I logged anything. Definitely fallen off the horse a bit.
+Been super busy with other modules and genuinely awful feelings.
+
+Computer keeps crashing. Not proud of my work here and already exhausted. Just gotta get stuff submitted. 
+Passes get degrees.
+
+On a good note I did manage to get an extra 2k words added to my report so far it's at 3.3k.
+It aint all doom and gloom in my world~
+
+Catastrophising is so easy when you're all alone.
+Gonna try get a little done, every little helps!
+
+(02:57)
+Been watching some lectures on Depression and Catastrophising in the background
+Hopefully knowing how to handle this stuff will help a bit more~
+Added the previously made simple tetrahedron into my scene
+Now to make it work with the clicking script
+
+(03:29)
+Got simple tetrahedrons working with point locator.
+It's pretty nice but its not quite right.
+Still, progress is good!
