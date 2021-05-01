@@ -1,0 +1,45 @@
+(13:46)
+Time to kick some ass!
+Was preoccupied yesterday and the day before with my shaders submission.
+
+Now I need to do some more work on this project.
+I think the key thing is to make sure I'm satisfying the aims of the project document.
+
+I need to ensure I'm meeting the key points, which are:
+
+    - Saving loading system         [½]
+    - Hit algorithm                 [✓]
+    - Visualizer for placing hits   [✓]
+    - Tests                         [X]
+
+SAVING-LOADING
+==============
+To achieve this we want to be able to load in arbitrary models and save models
+2 main things to seach for:
+    - loading models
+    - saving meshes as model formats
+
+
+Saving :
+    Looked up .obj files https://en.wikipedia.org/wiki/Wavefront_.obj_file
+    Also checked out details of an OBJ I exported from Maya
+
+    Now know roughly how to structure the file
+    So might be able to write it to a string and save to file
+    Just gotta get saving to file down
+
+
+Extra hit algo ideas
+    - get face index from hit
+    - stretch face and move it
+    - find adjacent faces through shared vertices?
+    - stretch those too?
+    - fire ray downwards
+    - only apply hit if find anvil
+    - otherwise apply force to rigidbody
+
+(17:34)
+It saves to file now!
+Wrote a custom little script that writes the data as an OBJ!
+This was a fun little thing to do~
+Added my own messy model from another project

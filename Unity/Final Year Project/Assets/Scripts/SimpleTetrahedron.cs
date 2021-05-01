@@ -17,9 +17,9 @@ public class SimpleTetrahedron : MonoBehaviour
 
     public int[] indices = {0,1,2, 3,4,5, 6,7,8, 9,10,11};
 
-    public Vector3[] vertPos;
-    public Vector2[] vertUV;
-    public Vector3[] vertNorm;
+    public Vector3[] vertPos = new Vector3[12];
+    public Vector2[] vertUV = new Vector2[12];
+    public Vector3[] vertNorm = new Vector3[12];
 
     int m_selected = 0;
     [Range(0.0f, 2.0f)]
@@ -39,14 +39,15 @@ public class SimpleTetrahedron : MonoBehaviour
 
     public void ApplyHit(Vector3 pos, Vector3 norm)
     {
+        Vector3 position = transform.InverseTransformPoint(pos);
         int vert = 0;
-        float distance = Vector3.Distance(pos, m_vertices[0]);
+        float distance = Vector3.Distance(position, m_vertices[0]);
 
         for(int i = 1; i < 4; i++)
         {
-            if(Vector3.Distance(pos, m_vertices[i]) < distance)
+            if(Vector3.Distance(position, m_vertices[i]) < distance)
             {
-                distance = Vector3.Distance(pos, m_vertices[i]);
+                distance = Vector3.Distance(position, m_vertices[i]);
                 vert = i;
             }
         }
@@ -166,6 +167,11 @@ public class SimpleTetrahedron : MonoBehaviour
         vertNorm[9] = face4;
         vertNorm[10] = face4;
         vertNorm[11] = face4;
+
+        for(int i = 0; i < 12; i++)
+        {
+            vertUV[i] = new Vector2(0.0f, 0.0f);
+        }
         
 
         // Do some calculations...

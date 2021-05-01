@@ -92,6 +92,7 @@ public class SegmentedBar : MonoBehaviour
         List<Vector3> verts = new List<Vector3>();
         List<Vector3> actual = new List<Vector3>();
         List<Vector3> normals = new List<Vector3>();
+        List<Vector2> texture = new List<Vector2>();
         List<int> indices = new List<int>();
 
         foreach(BarSegment segment in m_segments)
@@ -180,11 +181,15 @@ public class SegmentedBar : MonoBehaviour
             normals.Add(norm);
             normals.Add(norm);
             normals.Add(norm);
+            texture.Add(new Vector2(0.0f, 0.0f));
+            texture.Add(new Vector2(0.0f, 0.0f));
+            texture.Add(new Vector2(0.0f, 0.0f));
         }
 
         m_mesh.vertices = actual.ToArray();
         m_mesh.triangles = indices.ToArray();
         m_mesh.normals = normals.ToArray();
+        m_mesh.uv = texture.ToArray();
 
         GetComponent<MeshCollider>().sharedMesh = m_mesh;
     }

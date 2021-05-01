@@ -10,6 +10,7 @@ public class PointLocator : MonoBehaviour
     public GameObject m_pointer;
     public string m_measurable;
     public GameObject m_target;
+    public int m_hitIndex;
     public Vector3 m_position = new Vector3(0, 0, 0);
     public Vector3 m_normal = new Vector3(0, 1, 0);
 
@@ -32,6 +33,18 @@ public class PointLocator : MonoBehaviour
             }
             m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
         }
+
+        if (Input.GetMouseButtonDown(1) && m_target.tag == m_measurable) 
+        {
+            if(m_hitter) 
+            {
+                Mesh mesh = m_target.GetComponent<MeshFilter>().sharedMesh;
+                if(mesh)
+                {
+                    MeshSaver.SaveToOBJ(m_target.name, mesh);
+                }
+            }
+        }
     }
 
     void RaycastMouseHit()
@@ -42,6 +55,7 @@ public class PointLocator : MonoBehaviour
         {
             m_position = hit.point;
             m_normal = hit.normal;
+            m_hitIndex = hit.triangleIndex;
             m_pointer.transform.position = m_position;
             SetLinePoses();
 

@@ -1,0 +1,15 @@
+(15:09)
+Okay got a meeting with Jethro at 16:30.
+
+Things I gotta get fixed:
+    [x] tetra transforms world point into local coordinates 
+    [ ] make sure it cant go negative or zero
+    [ ] fix the start so you face forwards and the mouse is immediately locked in
+
+Other things to think about:
+    [ ] connected tetras
+    [ ] get more writing done on report
+
+(17:05)
+Metting went mostly okay. Just sorta meh.
+Being alive doesnt even feel like being alive any more.
