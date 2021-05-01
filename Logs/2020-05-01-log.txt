@@ -43,3 +43,11 @@ It saves to file now!
 Wrote a custom little script that writes the data as an OBJ!
 This was a fun little thing to do~
 Added my own messy model from another project
+
+(19:52)
+Tried making another type of deformation I called SmashMesh.
+Unfortunately this one is rather lame as a lot of the beauty and connected info is lost.
+I thought I'd thought up a good solution, but it wont actually work.
+Sinec a lot of vertices have the same poition but different normals I cant jsut compare all the tris with overlapping verts :(
+Short of writing my own mesh class I cant really fix this idea and this late i nthe game its probably best just to abandon.
+

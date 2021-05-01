@@ -30,6 +30,7 @@ public class PointLocator : MonoBehaviour
                 if(m_target.GetComponent<SimpleMesh>() != null) m_target.GetComponent<SimpleMesh>().ApplyHit(m_position, m_normal);
                 else if(m_target.GetComponent<SegmentedBar>() != null) m_target.GetComponent<SegmentedBar>().TakeHit(m_position, m_normal);
                 else if(m_target.GetComponent<SimpleTetrahedron>() != null) m_target.GetComponent<SimpleTetrahedron>().ApplyHit(m_position, -m_normal);
+                else if(m_target.GetComponent<SmashMesh>() != null) m_target.GetComponent<SmashMesh>().ApplyHit(m_position, -m_normal, m_hitIndex);
             }
             m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
         }
