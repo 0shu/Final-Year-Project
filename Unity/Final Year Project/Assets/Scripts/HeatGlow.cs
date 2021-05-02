@@ -32,9 +32,9 @@ public class HeatGlow : MonoBehaviour
     void Update() {
         m_heat = Mathf.Max(m_minHeat, m_heat - (Time.deltaTime * m_coolRate));
         m_color = m_gradient.Evaluate(m_heat/m_maxHeat);
-        m_affectColor = new Color(Mathf.Max(m_color.r - m_colorKey[0].color.r, 0), Mathf.Max(m_color.g - m_colorKey[0].color.g, 0), Mathf.Max(m_color.b - m_colorKey[0].color.b, 0)) * 0.5f;
+        m_affectColor = new Color(Mathf.Max(m_color.r - m_colorKey[0].color.r, 0), Mathf.Max(m_color.g - m_colorKey[0].color.g, 0), Mathf.Max(m_color.b - m_colorKey[0].color.b, 0));
         m_material.SetColor("_EmissionColor", m_affectColor);
-        if(GetComponent<Light>() != null) GetComponent<Light>().color = m_affectColor * 0.5f;
+        if(GetComponent<Light>() != null) GetComponent<Light>().color = m_affectColor * 0.25f;
     }
 
     void SetUpColours()
@@ -62,7 +62,7 @@ public class HeatGlow : MonoBehaviour
         m_alphaKey[3].alpha = 1.0f;
         m_alphaKey[3].time = 1120.0f / m_maxHeat;
 
-        m_colorKey[4].color = new Color(1.0f, 1.0f, 0.25f);
+        m_colorKey[4].color = new Color(1.0f, 1.0f, 0.4f);
         m_colorKey[4].time = 1250.0f / m_maxHeat;
         m_alphaKey[4].alpha = 1.0f;
         m_alphaKey[4].time = 1270.0f / m_maxHeat;
