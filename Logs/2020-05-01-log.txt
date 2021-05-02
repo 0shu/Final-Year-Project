@@ -51,3 +51,10 @@ I thought I'd thought up a good solution, but it wont actually work.
 Sinec a lot of vertices have the same poition but different normals I cant jsut compare all the tris with overlapping verts :(
 Short of writing my own mesh class I cant really fix this idea and this late i nthe game its probably best just to abandon.
 
+(20:00)
+Gonna have to call it on FYP tonight so I can get some robotics done!
+TODO for tommorow: 
+    - Make whole new mesh class if feeling it.
+    - Heat variable into solids (affects how manipulatable they are!)
+    - Make said heat variable affect the material colour~
+        -Unity probably has some kind of multi colour gradient tool
