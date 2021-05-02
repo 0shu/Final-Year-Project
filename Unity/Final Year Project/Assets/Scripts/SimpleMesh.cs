@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 public class SimpleMesh : MonoBehaviour
 {
-    public float m_compression = 1.1f;
+    public float m_compression = 0.5f;
     
     public Mesh m_mesh;
 
@@ -27,8 +27,10 @@ public class SimpleMesh : MonoBehaviour
 
         center /= indices.Length;
 
-        float newOne = (1 / m_compression);
-        float newTwo = (Mathf.Pow(m_compression, 0.5f));
+        float force = 1.0f + (m_compression * GetComponent<HeatGlow>().GetPercent());
+
+        float newOne = (1 / force);
+        float newTwo = (Mathf.Pow(force, 0.5f));
         Vector3 newScale;
 
         if(localNorm == Vector3.up || localNorm == -Vector3.up) newScale = new Vector3(newTwo, newOne, newTwo);

@@ -60,6 +60,13 @@ public class PointLocator : MonoBehaviour
             switch(m_mode)
             {
                 case Selected.Tongs:
+                    m_target.transform.SetParent(transform.GetChild(0));
+                    Rigidbody rb = m_target.GetComponent<Rigidbody>();
+                    if(rb) 
+                    {
+                        rb.useGravity = false;
+                        rb.isKinematic = true;
+                    }
                     break;
 
                 case Selected.Hammer: //Applies hit depending on what type of hit taker is present
@@ -84,6 +91,18 @@ public class PointLocator : MonoBehaviour
             }
 
             m_calc.CalcVolume(m_target.GetComponent<MeshFilter>().mesh);
+        }
+
+        if (Input.GetMouseButtonUp(0) && m_target.transform.IsChildOf(transform.GetChild(0)))
+        {
+            m_target.transform.SetParent(null);
+            Rigidbody rb = m_target.GetComponent<Rigidbody>();
+            if(rb) 
+            {
+                rb.sleepThreshold = 0.0f;
+                rb.useGravity = true;
+                rb.isKinematic = false;
+            }
         }
 
         if (m_mode == Selected.Torch && Input.GetMouseButton(0) && m_target.tag == m_measurable) 

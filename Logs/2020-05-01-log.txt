@@ -55,6 +55,6 @@ Short of writing my own mesh class I cant really fix this idea and this late i n
 Gonna have to call it on FYP tonight so I can get some robotics done!
 TODO for tommorow: 
     - Make whole new mesh class if feeling it.
-    - Heat variable into solids (affects how manipulatable they are!)
-    - Make said heat variable affect the material colour~
-        -Unity probably has some kind of multi colour gradient tool
+    - Heat variable into solids (affects how manipulatable they are!)   [✓]
+    - Make said heat variable affect the material colour~               [✓]
+        -Unity probably has some kind of multi colour gradient tool     [✓]

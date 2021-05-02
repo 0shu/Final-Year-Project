@@ -19,7 +19,17 @@ Keyboard controls can change modes, colour changes so you know what you're doing
     Green = Camera (working, saves model to OBJ)
 
 NEXT TODOS:
-    - Tie heat into how hit works                [ ]
-    - Make moving stuff work around              [ ]
-    - Hotbar asset and scrolling to control it   [ ]
+    - Tie heat into how hit works                [✓]
+    - Make moving stuff work around              [✓]
+    - Hotbar asset and scrolling to control it   [✓]
     - Pause screen and ability to return to menu [✓]
+
+(19:50)
+Okay update again!
+Got moving stuff around!
+Then just for kicks I made it so that heat transfers between solids that are touching.
+Pretty cool feature tbh~
+
+(20:19)
+Okay all 3 working types use heat to affect how strong their hits are!
+Now we're getting somewhere~

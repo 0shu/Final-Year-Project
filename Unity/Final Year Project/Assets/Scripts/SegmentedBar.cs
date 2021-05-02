@@ -45,9 +45,9 @@ public class SegmentedBar : MonoBehaviour
                 distance = Vector3.Distance(pos, segment.transform.position);
             }
         }
-
+        float force = GetComponent<HeatGlow>().GetPercent();
         //Tell closest to recieve hit
-        closest.ApplyHit(newNorm, 1.0f);
+        closest.ApplyHit(newNorm, force);
     }
 
     public void UpdateAround(int index)

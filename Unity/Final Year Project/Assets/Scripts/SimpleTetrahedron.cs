@@ -33,7 +33,7 @@ public class SimpleTetrahedron : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Generate();
+        //Generate();
     }
 
     public void ApplyHit(Vector3 pos, Vector3 norm)
@@ -52,8 +52,10 @@ public class SimpleTetrahedron : MonoBehaviour
             }
         }
 
+        float force = m_power * GetComponent<HeatGlow>().GetPercent();
+
         m_selected = vert;
-        ApplyHit3D(normal, m_power);
+        ApplyHit3D(normal, force);
         Generate();
     }
 

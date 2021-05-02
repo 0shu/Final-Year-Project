@@ -37,6 +37,11 @@ public class HeatGlow : MonoBehaviour
         if(GetComponent<Light>() != null) GetComponent<Light>().color = m_affectColor * 0.25f;
     }
 
+    public float GetPercent()
+    {
+        return Mathf.Clamp((m_heat - (m_minHeat + 200.0f)) /((m_maxHeat - 200.0f) - m_minHeat), 0.0f, 1.0f);
+    }
+
     public void Heat(float amount)
     {
         m_heat += amount;
@@ -78,5 +83,17 @@ public class HeatGlow : MonoBehaviour
         m_alphaKey[5].time = 1480.0f / m_maxHeat;
 
         m_gradient.SetKeys(m_colorKey, m_alphaKey);
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        //Check to see if the Collider's name is "Chest"
+        HeatGlow solid = collision.collider.GetComponent<HeatGlow>();
+        if (solid)
+        {
+            float diff = m_heat - solid.m_heat;
+            solid.Heat(diff * 0.125f * Time.deltaTime);
+            Heat(-diff * 0.125f * Time.deltaTime);
+        }
     }
 }
