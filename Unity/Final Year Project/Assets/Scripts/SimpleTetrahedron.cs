@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[ExecuteInEditMode]
 [RequireComponent(typeof(MeshFilter))]
 public class SimpleTetrahedron : MonoBehaviour
 {
@@ -34,12 +33,13 @@ public class SimpleTetrahedron : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Generate();
     }
 
     public void ApplyHit(Vector3 pos, Vector3 norm)
     {
         Vector3 position = transform.InverseTransformPoint(pos);
+        Vector3 normal = transform.InverseTransformVector(norm);
         int vert = 0;
         float distance = Vector3.Distance(position, m_vertices[0]);
 
@@ -53,7 +53,7 @@ public class SimpleTetrahedron : MonoBehaviour
         }
 
         m_selected = vert;
-        ApplyHit3D(norm, m_power);
+        ApplyHit3D(normal, m_power);
         Generate();
     }
 

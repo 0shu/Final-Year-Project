@@ -13,7 +13,7 @@ public class SegmentedBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_mesh = GetComponent<MeshFilter>().mesh;
+        m_mesh = new Mesh();
 
         foreach (Transform child in transform)
         {
@@ -191,6 +191,7 @@ public class SegmentedBar : MonoBehaviour
         m_mesh.normals = normals.ToArray();
         m_mesh.uv = texture.ToArray();
 
+        GetComponent<MeshFilter>().mesh = m_mesh;
         GetComponent<MeshCollider>().sharedMesh = m_mesh;
     }
 }

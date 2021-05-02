@@ -1,0 +1,10 @@
+(11:26)
+Been working on stuff this morning!
+Added a gradient so that between 0-1800 kelvin the colour corresponds.
+Added a heat glow class to make the metal change based on heat, also emits.
+Downloaded a new package to enable post processing effects.
+Now the hot emmissive metals also have a glow~
+Did another camera for rendering the locator without bloom.
+
+NEXT TODOS:
+    - Make the existing stuff use 

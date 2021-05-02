@@ -11,7 +11,8 @@ public class SimpleMesh : MonoBehaviour
 
     public void ApplyHit(Vector3 pos, Vector3 normal)
     {
-        Vector3 localPos = pos - transform.position;
+        Vector3 localPos = transform.InverseTransformPoint(pos);
+        Vector3 localNorm = transform.InverseTransformVector(normal);
         m_mesh = GetComponent<MeshFilter>().mesh;
 
         Vector3[] verts = m_mesh.vertices;
@@ -30,14 +31,14 @@ public class SimpleMesh : MonoBehaviour
         float newTwo = (Mathf.Pow(m_compression, 0.5f));
         Vector3 newScale;
 
-        if(normal == Vector3.up || normal == -Vector3.up) newScale = new Vector3(newTwo, newOne, newTwo);
-        else if(normal == Vector3.right || normal == -Vector3.right) newScale = new Vector3(newOne, newTwo, newTwo);
-        else if(normal == Vector3.forward || normal == -Vector3.forward) newScale = new Vector3(newTwo, newTwo, newOne);
+        if(localNorm == Vector3.up || localNorm == -Vector3.up) newScale = new Vector3(newTwo, newOne, newTwo);
+        else if(localNorm == Vector3.right || localNorm == -Vector3.right) newScale = new Vector3(newOne, newTwo, newTwo);
+        else if(localNorm == Vector3.forward || localNorm == -Vector3.forward) newScale = new Vector3(newTwo, newTwo, newOne);
         else
         {
             Debug.Log("Normal is not on the axes!");
 
-            Matrix4x4 rot = Matrix4x4.LookAt(Vector3.zero, normal, Vector3.up);
+            Matrix4x4 rot = Matrix4x4.LookAt(Vector3.zero, localNorm, Vector3.up);
             Matrix4x4 inv = rot.inverse;
 
             for(int i = 0; i < verts.Length; i++)
