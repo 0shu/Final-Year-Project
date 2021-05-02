@@ -37,6 +37,11 @@ public class HeatGlow : MonoBehaviour
         if(GetComponent<Light>() != null) GetComponent<Light>().color = m_affectColor * 0.25f;
     }
 
+    public void Heat(float amount)
+    {
+        m_heat += amount;
+    }
+
     void SetUpColours()
     {
         m_colorKey = new GradientColorKey[6];

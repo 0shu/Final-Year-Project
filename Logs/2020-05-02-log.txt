@@ -7,4 +7,19 @@ Now the hot emmissive metals also have a glow~
 Did another camera for rendering the locator without bloom.
 
 NEXT TODOS:
-    - Make the existing stuff use 
+    - Make the existing stuff use heat as a property
+    - Hotbar for heating/holding/hitting/saving
+
+(17:14)
+Pointer can now do 3 of 4 main things, just cant move stuff yet.
+Keyboard controls can change modes, colour changes so you know what you're doing.
+    Blue = move (not working)
+    Yellow = hit (working, changes shape based on class on model)
+    Red = torch (working, heats up thing and makes it glow)
+    Green = Camera (working, saves model to OBJ)
+
+NEXT TODOS:
+    - Tie heat into how hit works                [ ]
+    - Make moving stuff work around              [ ]
+    - Hotbar asset and scrolling to control it   [ ]
+    - Pause screen and ability to return to menu [✓]
